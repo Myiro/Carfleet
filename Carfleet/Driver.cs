@@ -32,5 +32,13 @@ namespace Carfleet
                 return _firstname;
             }
         }
+
+        public string EmailAddress
+        {
+            get
+            {
+                return _emailAddress;
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,6 +51,21 @@ namespace Carfleet
                 return result;
             }
             
+        }
+
+        public List<string> GetDriversEmail()
+        {
+
+            List<string> result = new List<string>();
+
+            foreach (Car car in _cars)
+            {
+                Driver driver = car.Driver;
+
+                result.Add(driver.EmailAddress);
+            }
+
+            return result;
         }
 
     }

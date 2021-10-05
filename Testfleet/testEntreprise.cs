@@ -81,6 +81,24 @@ namespace Testfleet
             Assert.AreEqual(expectedValue, result);
         }
 
+        [Test]
+        public void Driver_GetDriverEmail()
+        {
+            List<string> expectedValue = new List<string>();
+            List<string> actualValue = new List<string>();
+            string value = "Luca@gatto.ch";
+            for (int i = 0; i < 10; i++)
+            {
+                expectedValue.Add(value);
+            }
+
+            actualValue = _entreprise.GetDriversEmail();
+
+            Assert.AreEqual(actualValue, expectedValue);
+
+
+        }
+
 
     }
 }
