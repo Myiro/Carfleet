@@ -26,19 +26,17 @@ namespace Carfleet
         }
 
 
-        public int DistanceAverageByDriver
+        public int DistanceAverageByDriver()
         {
-            get
+            int result = 0;
+            int count = 0;
+            if (_cars != null)
             {
-                int result = 0;
-                int count = 0;
-                if (_cars != null)
+                foreach (var car in _cars)
                 {
-                    foreach (var car in _cars)
-                    {
-                        result = result + car.OdometerCurrentValue;
-                        count++;
-                    }
+                    result += car.OdometerCurrentValue;
+                    count++;
+                }
                 }
                 else
                 {
@@ -49,7 +47,7 @@ namespace Carfleet
                 result = result / count;
 
                 return result;
-            }
+
             
         }
 

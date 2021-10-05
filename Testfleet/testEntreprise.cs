@@ -77,7 +77,7 @@ namespace Testfleet
         {
             int expectedValue = 3000;
 
-            int result = _entreprise.DistanceAverageByDriver;
+            int result = _entreprise.DistanceAverageByDriver();
             Assert.AreEqual(expectedValue, result);
         }
 
