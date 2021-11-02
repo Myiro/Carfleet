@@ -1,6 +1,5 @@
 using NUnit.Framework;
 using Carfleet;
-using System;
 using System.Collections.Generic;
 
 namespace Testfleet
@@ -59,8 +58,6 @@ namespace Testfleet
                 _cars.Add(_car);
             }
                 
-
-
             _entName = "Koppa";
             _address = "KoppaLand";
             _NPA = "KoppaCity";
@@ -68,8 +65,6 @@ namespace Testfleet
             _email = "koppa@koppa.koppa";
 
             _entreprise = new Entreprise(_entName, _address, _NPA, _entPhoneNumber, _email, _cars);
-
-
         }
 
         [Test]
@@ -95,10 +90,6 @@ namespace Testfleet
             actualValue = _entreprise.GetDriversEmail();
 
             Assert.AreEqual(actualValue, expectedValue);
-
-
         }
-
-
     }
 }

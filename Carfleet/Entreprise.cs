@@ -28,32 +28,24 @@ namespace Carfleet
 
         public int DistanceAverageByDriver()
         {
-            int result = 0;
-            int count = 0;
             if (_cars != null)
             {
+                int result = 0;//TODO Variables should be declared as locally as possible.
+                int count = 0;
                 foreach (var car in _cars)
                 {
                     result += car.OdometerCurrentValue;
                     count++;
                 }
-                }
-                else
-                {
-                    return 0;
-                }
-                
-
                 result = result / count;
 
                 return result;
-
-            
+            }
+            return 0;//TODO refactor proposition           
         }
 
         public List<string> GetDriversEmail()
         {
-
             List<string> result = new List<string>();
 
             foreach (Car car in _cars)
@@ -65,6 +57,5 @@ namespace Carfleet
 
             return result;
         }
-
     }
 }

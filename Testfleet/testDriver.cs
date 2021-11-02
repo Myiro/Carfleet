@@ -25,7 +25,6 @@ namespace Testfleet
             _language = "italien";
 
             _driver = new Driver(_name, _firstname, _city, _phoneNumber, _emailAddress, _language);
-
         }
 
         [Test]

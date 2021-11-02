@@ -11,9 +11,9 @@ namespace Testfleet
         private string _brand;
         private string _model;
         private string _chaissisNumber;
-        private int _adometerInitialValue;
+        private int _adometerInitialValue;//TODO never used
         private Driver _driver;
-        private int _adometerCurentValue;
+        private int _adometerCurentValue;//TODO never used
 
         private string _name;
         private string _firstname;
@@ -34,8 +34,6 @@ namespace Testfleet
 
             _driver = new Driver(_name, _firstname, _city, _phoneNumber, _emailAddress, _language);
 
-
-
             _registration = "VD-437843";
             _brand = "porsche";
             _model = "911";
@@ -43,7 +41,6 @@ namespace Testfleet
             _adometerInitialValue = 3000;
 
             _car = new Car(_registration, _brand, _model, _chaissisNumber, _driver);
-
         }
 
         [Test]
@@ -61,7 +58,5 @@ namespace Testfleet
 
             Assert.AreEqual(expectedValue, actualValue);
         }
-
-
     }
 }
